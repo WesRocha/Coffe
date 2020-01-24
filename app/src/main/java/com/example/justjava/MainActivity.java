@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.TextView;
 import java.text.NumberFormat;
 
@@ -21,37 +22,55 @@ public class MainActivity extends AppCompatActivity {
     int quantityExpresso = 0;
     int quantityCapuccino = 0;
     String chantily = "";
+    String choco = "";
 
     public void submitOrder(View view){
+        CheckBox estaCheckChoco = (CheckBox) findViewById(R.id.checkboxChoco);
 
-        CheckBox estaCheck = (CheckBox) findViewById(R.id.checkboxChant);
-        if(estaCheck.isChecked()){
+        CheckBox estaCheckChant = (CheckBox) findViewById(R.id.checkboxChant);
+
+        EditText teste = (EditText) findViewById(R.id.name);
+
+        if(estaCheckChant.isChecked()){
             chantily = "Com adicional de chantilly";
         }else{
             chantily = "";
         }
+
+        if (estaCheckChoco.isChecked()){
+            choco = "Com adicional de chocolate";
+        }else{
+            choco = "";
+        }
+
         if(quantityExpresso == 0){
-            String message = "Você pediu:\n"
+            String message = teste.getText() + " você pediu:\n"
                     + quantityCapuccino + " capuccino(s)\n"
-                    + "O total é de R$: " + calculate2(quantityCapuccino, estaCheck.isChecked()) + "\n" +  chantily;
+                    + "O total é de R$: " + calculate2(quantityCapuccino, estaCheckChant.isChecked(), estaCheckChoco.isChecked())
+                    + "\n" +  chantily + "\n" + choco;
             displayMessage(message);
         }else if(quantityCapuccino == 0){
-            String message = "Você pediu:\n"
+            String message = teste.getText() + " você pediu:\n"
                     + quantityExpresso + " expresso(s)\n"
-                    + "O total é de R$: " + calculate1(quantityExpresso, estaCheck.isChecked()) + "\n" + chantily;
+                    + "O total é de R$: " + calculate1(quantityExpresso, estaCheckChant.isChecked(), estaCheckChoco.isChecked())
+                    + "\n" + chantily + "\n" + choco;
             displayMessage(message);
         }else{
-            String message = "Você pediu:\n"
+            String message = teste.getText() + " você pediu:\n"
                     + quantityExpresso + " café(s) expresso(s)\n"
                     + quantityCapuccino + " capuccino(s)\n"
-                    + "O total é de R$: " + calculate3(quantityExpresso, quantityCapuccino, estaCheck.isChecked()) + "\n" + chantily;
+                    + "O total é de R$: " + calculate3(quantityExpresso, quantityCapuccino, estaCheckChant.isChecked(), estaCheckChoco.isChecked())
+                    + "\n" + chantily + "\n" + choco;
             displayMessage(message);
         }
 
     }
 
-    private double calculate1(double quantityEx, boolean chant){
-        if (chant == true){
+    private double calculate1(double quantityEx, boolean chant, boolean choco){
+        if (chant == true && choco == true){
+            double total = quantityEx * 3.5 + 4;
+            return total;
+        }else if (chant == true || choco == true){
             double total = quantityEx * 3.5 + 2;
             return total;
         }else{
@@ -61,8 +80,11 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private double calculate2(double quantityCap, boolean chant){
-        if (chant == true){
+    private double calculate2(double quantityCap, boolean chant, boolean choco){
+        if (chant == true && choco == true){
+            double total = quantityCap * 5 + 4;
+            return total;
+        }else if (chant == true || choco == true){
             double total = quantityCap * 5 + 2;
             return total;
         }else{
@@ -72,11 +94,14 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private double calculate3(double quantityEx, double quantityCap, boolean chant){
-        if (chant == true){
+    private double calculate3(double quantityEx, double quantityCap, boolean chant, boolean choco){
+        if (chant == true && choco == true){
+            double total = ((quantityEx * 3.5) + (quantityCap * 5)) + 4;
+            return total;
+        }else if (chant == true || choco == true){
             double total = ((quantityEx * 3.5) + (quantityCap * 5)) + 2;
             return total;
-        }else{
+        }else {
             double total = ((quantityEx * 3.5) + (quantityCap * 5));
             return total;
         }
@@ -134,4 +159,5 @@ public class MainActivity extends AppCompatActivity {
         TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
         priceTextView.setText(message);
     }
+
 }
