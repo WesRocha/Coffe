@@ -236,7 +236,7 @@
                     android:layout_width="100dp"
                     android:layout_height="48dp"
                     android:text="Reset"
-                    android:background="@drawable/buttonshape"
+                    android:background="@drawable/buttonshape1"
                     android:onClick="reset"
                     android:layout_marginRight="5dp"/>
 
@@ -245,7 +245,7 @@
                     android:layout_width="100dp"
                     android:layout_height="48dp"
                     android:text="order"
-                    android:background="@drawable/buttonshape"
+                    android:background="@drawable/buttonshape1"
                     android:onClick="submitOrder"
                     android:layout_marginLeft="5dp"/>
 
