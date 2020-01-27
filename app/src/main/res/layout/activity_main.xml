@@ -28,16 +28,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Nome:"
-                android:textAllCaps="true"
-                android:padding="8dp"
                 android:layout_centerInParent="true"
                 android:layout_alignParentTop="true"
                 android:layout_marginTop="10dp"
-                android:textColor="#ffffff"
-                android:shadowColor="#000000"
-                android:shadowDx="5"
-                android:shadowDy="5"
-                android:shadowRadius="8"/>
+                style="@style/TextPad" />
 
             <EditText
                 android:id="@+id/name"
@@ -45,10 +39,10 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:layout_alignParentTop="true"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="35dp"
                 android:textColor="#ffffff"
                 android:hint="Digite seu Nome"
-                android:textColorHint="#2AFFFFFF"
+                android:textColorHint="#88FFFFFF"
                 android:backgroundTint="#ffffff"
                 android:layout_below="@id/Nome"
                 android:textAlignment="center"/>
@@ -58,21 +52,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Expresso (R$: 3,50)"
-                android:textAllCaps="true"
-                android:padding="8dp"
                 android:layout_centerInParent="true"
                 android:layout_marginTop="10dp"
-                android:textColor="#ffffff"
-                android:shadowColor="#000000"
-                android:shadowDx="5"
-                android:shadowDy="5"
-                android:shadowRadius="8"
-                android:layout_below="@id/name"/>
+                android:layout_below="@id/name"
+                style="@style/TextPad" />
 
             <Button
                 android:id="@+id/menosExpresso"
                 android:text="-"
-                android:textColor="#FFFFFF"
+                android:textColor="#524239"
                 android:textSize="24sp"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
@@ -91,20 +79,14 @@
                 android:layout_height="wrap_content"
                 android:text="0"
                 android:textSize="20sp"
-                android:fontFamily="sans-serif-black"
                 android:layout_below="@id/quantidadeExpresso"
                 android:layout_centerInParent="true"
-                android:padding="8dp"
-                android:textColor="#ffffff"
-                android:shadowColor="#000000"
-                android:shadowDx="5"
-                android:shadowDy="5"
-                android:shadowRadius="8"/>
+                style="@style/TextPad" />
 
             <Button
                 android:id="@+id/maisExpresso"
                 android:text="+"
-                android:textColor="#FFFFFF"
+                android:textColor="#524239"
                 android:textSize="24sp"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
@@ -122,21 +104,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Capuccino (R$: 5,00)"
-                android:textAllCaps="true"
                 android:layout_below="@id/quantity_text_view_expresso"
-                android:padding="8dp"
                 android:layout_marginTop="8dp"
                 android:layout_centerInParent="true"
-                android:textColor="#ffffff"
-                android:shadowColor="#000000"
-                android:shadowDx="5"
-                android:shadowDy="5"
-                android:shadowRadius="8"/>
+                style="@style/TextPad" />
 
             <Button
                 android:id="@+id/menosCapuccino"
                 android:text="-"
-                android:textColor="#FFFFFF"
+                android:textColor="#524239"
                 android:textSize="24sp"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
@@ -155,20 +131,14 @@
                 android:layout_height="wrap_content"
                 android:text="0"
                 android:textSize="20sp"
-                android:fontFamily="sans-serif-black"
                 android:layout_below="@id/quantidadeCapuccino"
                 android:layout_centerInParent="true"
-                android:padding="8dp"
-                android:textColor="#ffffff"
-                android:shadowColor="#000000"
-                android:shadowDx="5"
-                android:shadowDy="5"
-                android:shadowRadius="8"/>
+                style="@style/TextPad" />
 
             <Button
                 android:id="@+id/mais"
                 android:text="+"
-                android:textColor="#FFFFFF"
+                android:textColor="#524239"
                 android:textSize="24sp"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
@@ -186,40 +156,34 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Adicional"
-                android:layout_marginTop="10dp"
-                android:textAllCaps="true"
-                android:padding="8dp"
+                android:layout_marginTop="35dp"
                 android:layout_below="@id/quantity_text_view_capuccino"
                 android:layout_centerInParent="true"
-                android:textColor="#ffffff"
-                android:shadowColor="#000000"
-                android:shadowDx="5"
-                android:shadowDy="5"
-                android:shadowRadius="8"/>
+                style="@style/TextPad" />
 
             <CheckBox
-                android:layout_marginTop="8dp"
-                android:paddingLeft="12dp"
                 android:id="@+id/checkboxChant"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Adicional de Chantilly (R$: 2,00)"
-                android:textColor="#ffffff"
                 android:buttonTint="#ffffff"
                 android:layout_centerInParent="true"
-                android:layout_below="@id/toppíngs" />
+                android:layout_below="@id/toppíngs"
+                android:background="@drawable/check"
+                android:layout_margin="10dp"
+                style="@style/TextPad" />
 
             <CheckBox
-                android:layout_marginTop="8dp"
-                android:paddingLeft="12dp"
                 android:id="@+id/checkboxChoco"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Adicional de Chocolate (R$: 2,00)"
-                android:textColor="#ffffff"
                 android:buttonTint="#ffffff"
                 android:layout_centerInParent="true"
-                android:layout_below="@id/checkboxChant" />
+                android:layout_below="@id/checkboxChant"
+                android:background="@drawable/check"
+                android:layout_margin="10dp"
+                style="@style/TextPad" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -236,56 +200,24 @@
                     android:layout_width="100dp"
                     android:layout_height="48dp"
                     android:text="Reset"
-                    android:textColor="#FFFFFF"
+                    android:textColor="#65524239"
                     android:background="@drawable/buttonshape1"
                     android:onClick="reset"
-                    android:layout_marginRight="5dp"/>
+                    android:layout_marginRight="5dp"
+                    style="@style/TextPad" />
 
                 <Button
                     android:id="@+id/order"
                     android:layout_width="100dp"
                     android:layout_height="48dp"
                     android:text="order"
-                    android:textColor="#FFFFFF"
+                    android:textColor="#65524239"
                     android:background="@drawable/buttonshape1"
                     android:onClick="submitOrder"
-                    android:layout_marginLeft="5dp"/>
+                    android:layout_marginLeft="5dp"
+                    style="@style/TextPad" />
 
             </LinearLayout>
-
-            <TextView
-                android:id="@+id/price"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Price"
-                android:textAllCaps="true"
-                android:padding="8dp"
-                android:layout_marginTop="20dp"
-                android:layout_below="@id/Linear"
-                android:layout_centerInParent="true"
-                android:textColor="#ffffff"
-                android:shadowColor="#000000"
-                android:shadowDx="5"
-                android:shadowDy="5"
-                android:shadowRadius="8"/>
-
-            <TextView
-                android:id="@+id/price_text_view"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=""
-                android:textSize="16sp"
-                android:fontFamily="sans-serif-black"
-                android:layout_below="@id/price"
-                android:padding="8dp"
-                android:layout_centerInParent="true"
-                android:textColor="#ffffff"
-                android:shadowColor="#000000"
-                android:shadowDx="5"
-                android:shadowDy="5"
-                android:shadowRadius="8"/>
-
-
 
         </RelativeLayout>
     </RelativeLayout>
