@@ -60,7 +60,7 @@
             <Button
                 android:id="@+id/menosExpresso"
                 android:text="-"
-                android:textColor="#524239"
+                android:textColor="#ffffff"
                 android:textSize="24sp"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
@@ -86,7 +86,7 @@
             <Button
                 android:id="@+id/maisExpresso"
                 android:text="+"
-                android:textColor="#524239"
+                android:textColor="#ffffff"
                 android:textSize="24sp"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
@@ -112,7 +112,7 @@
             <Button
                 android:id="@+id/menosCapuccino"
                 android:text="-"
-                android:textColor="#524239"
+                android:textColor="#ffffff"
                 android:textSize="24sp"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
@@ -138,7 +138,7 @@
             <Button
                 android:id="@+id/mais"
                 android:text="+"
-                android:textColor="#524239"
+                android:textColor="#ffffff"
                 android:textSize="24sp"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
@@ -169,9 +169,9 @@
                 android:buttonTint="#ffffff"
                 android:layout_centerInParent="true"
                 android:layout_below="@id/toppíngs"
-                android:background="@drawable/check"
                 android:layout_margin="10dp"
                 style="@style/TextPad" />
+
 
             <CheckBox
                 android:id="@+id/checkboxChoco"
@@ -181,7 +181,6 @@
                 android:buttonTint="#ffffff"
                 android:layout_centerInParent="true"
                 android:layout_below="@id/checkboxChant"
-                android:background="@drawable/check"
                 android:layout_margin="10dp"
                 style="@style/TextPad" />
 
@@ -192,30 +191,29 @@
                 android:layout_below="@id/checkboxChoco"
                 android:layout_centerInParent="true"
                 android:orientation="horizontal"
-                android:layout_marginTop="30dp"
-                >
+                android:layout_marginTop="30dp" >
 
                 <Button
                     android:id="@+id/reset"
                     android:layout_width="100dp"
                     android:layout_height="48dp"
                     android:text="Reset"
-                    android:textColor="#65524239"
+                    android:textColor="#ffffff"
                     android:background="@drawable/buttonshape1"
                     android:onClick="reset"
-                    android:layout_marginRight="5dp"
-                    style="@style/TextPad" />
+                    android:fontFamily="sans-serif-condensed"
+                    android:layout_marginRight="5dp"/>
 
                 <Button
                     android:id="@+id/order"
                     android:layout_width="100dp"
                     android:layout_height="48dp"
                     android:text="order"
-                    android:textColor="#65524239"
+                    android:textColor="#ffffff"
                     android:background="@drawable/buttonshape1"
                     android:onClick="submitOrder"
-                    android:layout_marginLeft="5dp"
-                    style="@style/TextPad" />
+                    android:fontFamily="sans-serif-condensed"
+                    android:layout_marginLeft="5dp"/>
 
             </LinearLayout>
 
